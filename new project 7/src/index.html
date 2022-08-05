@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse</title>
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,7 +23,7 @@
                     </div>
                     <div class="header__contact">
                         <div class="header__phone"><a href="tel:+7 (499) 922-89-74">+7 (499) 922-89-74</a></div>
-                        <button class="button">заказать звонок</button>
+                        <button class="button" id="modal">заказать звонок</button>
                     </div>
                </div>
                <div class="gamburger">
@@ -58,8 +59,219 @@
    <section class="benefits">
         <div class="container">
             <h2>наши преимущества</h2>
+            <div class="benefits__wrapper">
+                <div class="benefits__text">
+                    <div class="benefits__icons"><img src="icons/cup.png" alt="кубок"></div>
+                    <h3>Делимся опытом</h3>
+                    <p>Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</p>
+                </div>
+
+                <div class="benefits__text">
+                    <div class="benefits__icons benefits__icons-animation"><img src="icons/heart.svg"alt="сердце"></div>
+                    <h3>Заботимся о здоровье</h3>
+                    <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</p>
+                </div>
+                <div class="benefits__text">
+                    <div class="benefits__icons"><img src="icons/shoe.png" alt="ботинок"></div>
+                    <h3>Учим бегать</h3>
+                    <p>Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href="#">I LOVE RUNNING.</a></p> 
+                </div>
+            </div>
+            
         </div>
    </section>
+   <section class="consultation">
+        <div class="container">
+            <h2>Получите бесплатную консультацию по подбору пульсометра</h2>
+            <p class="consultation__text">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</p>
+            <form action="#" class="feed-form">
+                <input name="name" required placeholder="Ваше имя" type="text" class="">
+                <input name="phone" required placeholder="Ваш телефон " type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <button class=" button button_main" >Заказать консультацию</button>
+            </form>
+        </div>
+   </section>
+<div class="carusel">
+    <div class="container">
+        <div class="slider">
+            <div class="slider__item">
+                <img src="img/slider 1.png" alt="картинка 1">
+            </div>
+            <div class="slider__item">
+                <img src="img/slider2.png" alt="картинка 2">
+            </div>
+            <div class="slider__item">
+                <img src="img/slider 3.png" alt="картинка 3">
+            </div>
+        </div>
+    </div>
+        
+</div>
+<section class="catalog">
+    <div class="container">
+        <h2>каталог пульсометров</h2>
+        <div class="button__tabs">
+            <button class="catalog__button catalog__button-active">для фитнеса</button>
+            <button class="catalog__button">для бега</button>
+            <button class="catalog__button">для триатлона</button>
+        </div>
+        <div class="catalog__wrapper-tabs">
+            <div class="catalog__wrapper2">
+                <div class="catalog__item">
+                    <div class="catalog__img"><img src="img/photo.png" alt="пульсометр"></div>
+                    <h3>Пульсометр Polar FT111111</h3>
+                    <p>Для первых шагов в тренировках, основанных на сердечном ритме</p>
+                    <p class="more">Подробнее</p>
+                    <div class="catalog__item1">
+                        <div class="catalog__item2">
+                            <p class="catalog__text1">4750руб.</p>
+                            <p class="catalog__text2">4500руб.</p>
+                        </div>
+                        <button class="button button_tabs">купить</button>
+                    </div>
+                </div>
+                <div class="catalog__item">
+                    <div class="catalog__img"><img src="img/photo.png" alt="пульсометр"></div>
+                    <h3>Пульсометр Suunto M22222</h3>
+                    <p>Для первых шагов в тренировках, основанных на сердечном ритме</p>
+                    <p class="more">Подробнее</p>
+                    <div class="catalog__item1">
+                        <div class="catalog__item2">
+                            <p class="catalog__text1">6 690 руб.</p>
+                            <p class="catalog__text2">6 641 руб.</p>
+                        </div>
+                        <button class="button button_tabs">купить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__wrapper2 catalog__wrapper2-active">
+                <div class="catalog__item">
+                <div class="catalog__img"><img src="img/photo.png" alt="пульсометр"></div>
+                <h3>Часы Utygig FT33333</h3>
+                <p>Для первых шагов в тренировках, основанных на сердечном ритме</p>
+                <p class="more">Подробнее</p>
+                <div class="catalog__item1">
+                    <div class="catalog__item2">
+                        <p class="catalog__text1">9000руб.</p>
+                        <p class="catalog__text2">8500руб.</p>
+                    </div>
+                    <button class="button button_tabs">купить</button>
+                </div>
+            </div>
+            <div class="catalog__item">
+                <div class="catalog__img"><img src="img/photo.png" alt="пульсометр"></div>
+                <h3>Пульсометр lutiir FT44444</h3>
+                <p>Для первых шагов в тренировках, основанных на сердечном ритме</p>
+                <p class="more">Подробнее</p>
+                <div class="catalog__item1">
+                    <div class="catalog__item2">
+                        <p class="catalog__text1">7000руб.</p>
+                        <p class="catalog__text2">6500руб.</p>
+                    </div>
+                    <button class="button button_tabs">купить</button>
+                </div>
+            </div>
+        </div>
+            <div class="catalog__wrapper2 catalog__wrapper2-active">
+                <div class="catalog__item">
+                    <div class="catalog__img"><img src="img/photo.png" alt="пульсометр"></div>
+                    <h3>Пульсометр lutiir FT55555</h3>
+                    <p>Для первых шагов в тренировках, основанных на сердечном ритме</p>
+                    <p class="more">Подробнее</p>
+                    <div class="catalog__item1">
+                        <div class="catalog__item2">
+                            <p class="catalog__text1">7000руб.</p>
+                            <p class="catalog__text2">6500руб.</p>
+                        </div>
+                        <button class="button button_tabs">купить</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="catalog__info">
+                <ul class="catalog__list">
+                    <li><span>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</span></li>
+                    <li><span>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</span></li>
+                    <li><span>Также Вы увидите информацию о расходе калорий за тренировку;</span></li>
+                    <li><span>Вы сможете посмотреть данные по 10 тренировкам.</span></li>
+                </ul>
+                <p class="back">назад</p>
+                <button class="button button_tabs">купить</button>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="wrapper-modal" id="wrapper-modal1">
+    <button class="red-cross" id="red-cross1"><img src="img/button_close.png" alt="крестик"></button>
+    <div class="modal">
+        <h3>Просто заполните форму заявки</h3>
+        <p>и мы перезвоним вам в течении 10 минут</p>
+        <form action="#" class="feed-form">
+            <input name="name" required placeholder="Ваше имя" type="text" class="">
+            <input name="phone" required placeholder="Ваш телефон " type="number">
+            <input name="email" required placeholder="Ваш E-mail" type="email">
+            <button class=" button button_main" >Заказать консультацию</button>
+        </form>
+        
+    </div>
+   
+</div>
+
+<div class="wrapper-modal" id="wrapper-modal2">
+    <div class="modal">
+        <h3>Ваш заказ:</h3>
+        <p></p>
+        <form action="#" class="feed-form">
+            <input name="name" required placeholder="Ваше имя" type="text" class="">
+            <input name="phone" required placeholder="Ваш телефон " type="number">
+            <input name="email" required placeholder="Ваш E-mail" type="email">
+            <button class=" button button_main">Купить</button>
+        </form>
+    </div>
+    <button class="red-cross" id="red-cross2"><img src="img/button_close.png" alt="крестик"></button>
+</div>
+<section class="reviews">
+    <div class="container">
+        <h2>отзывы клиентов</h2>
+        <div class="reviews__item">
+            <div class="reviews__img"><img src="img/rev1.png" alt="картинка"></div>
+            <div class="reviews__text">
+                <h3>Ирина Иванченко </h3>
+                <span>2 полумарафона</span>
+                <p>Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же. <br>
+                  <br>  Новые цели - новый гаджет!
+                    Спасибо, RunSmart! </p>
+            </div>
+        </div>
+        <div class="reviews__item">
+            <div class="reviews__img"><img src="img/rev2.png" alt="картинка"></div>
+            <div class="reviews__text">
+                <h3>Иван Сёмочкин</h3>
+                <span>1 полумарафон</span>
+                <p>Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. <br> 
+                    Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд. <br> <br>
+                   С ними подготовился к своему первому полумарафону! Спасибо!!!</p>
+            </div>
+        </div>
+        <div class="reviews__item">
+            <div class="reviews__img"><img src="img/rev3.png" alt="картинка"></div>
+            <div class="reviews__text">
+                <h3>Юлия Дашкина</h3>
+                <span>2 полумарафона</span>
+                <p>Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать. <br>
+                  <br>  Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!
+                  <br> Спасибо!!!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
    <script src="js/index.js"></script>
+
 </body>
 </html>
