@@ -1,0 +1,146 @@
+.carusel{
+	background-color: #f6f6f6;
+.slider{
+	position: relative;
+	padding: 81px 0;
+	margin: 0 auto;
+	width: 750px;
+	.slick-prev{
+		position: absolute;
+		border: none;
+		background-color: #f6f6f6;
+		top: 38%;
+		right: -15%;
+		img{
+			width: 31px;
+			height: 50px;
+		}
+		
+	}
+	.slick-next{
+		position: absolute;
+		border: none;
+		background-color: #f6f6f6;
+		top: 38%;
+		left: -15%;
+		img{
+			width: 31px;
+			height: 50px;
+		}
+	
+	}
+	
+}}
+// адаптация
+@media screen and (max-width: 1000px){
+		.carusel{
+			 overflow-x: hidden; 
+			.slider{
+                width: 675px;
+				.slider__item {
+                    margin: 0 auto;
+                img{
+                    width: 98%;
+                    height: 98%;
+				}}
+				.slick-prev{
+					right: -6.5%;
+				}
+				.slick-next{
+					left: -8%;
+				}
+			}
+		}
+}
+@media screen and (max-width: 810px) {
+    .carusel{
+       .slider{
+					.slick-prev{
+						top: 2%;
+						left: 50%;
+						right: 50%;
+					}
+					.slick-next{
+						top: 85%;
+						left: 50%;
+						right: 50%;
+					}
+			 }
+    }
+}
+@media  screen and (max-width: 760px){
+	.carusel{
+		.slider{
+			width: 100vh;
+			height: 100vh;
+			.slider__item{
+				padding-right: 20px;
+			}
+			.slick-dots{
+				display: flex;
+				position: absolute;
+				top: 2%;
+				left: 43%;
+				right: 56%;
+				list-style-type: none;
+				align-items: center;
+				justify-content: center;
+				li:nth-child(5){
+					display: none;
+				}
+				li:nth-child(4){
+					display: none;}
+				 button{
+					display: block;
+					width: 15px;
+					height: 15px;
+					border-radius: 100%;
+					margin-right: 10px;
+					background-color: rgba(97, 99, 127, 0.4);
+					border: none;
+					font-size: 0;
+				}
+
+			  }
+		    .slider__item:nth-child(7){
+					display: none;
+				}
+				.slider__item:nth-child(6){
+					display: none;
+				}
+				.slider__item:nth-child(5){
+					display: none;
+				}
+				.slider__item:nth-child(4){
+					display: none;
+				}}
+		}
+	}
+	@media screen and(max-width: 400px){
+		.carusel{
+			.slider{
+				.slider__item{
+					padding-right: 10px;
+				}
+
+			}
+		}
+	}
+	@media  screen and(max-width: 352px){
+		.carusel{
+			.slider{
+				.slider__item img{
+					width: 90%;
+				}
+				.slick-dots{
+					right: 63%;
+						left: 37%;}
+			}
+		}
+	}
+
+
+
+
+
+

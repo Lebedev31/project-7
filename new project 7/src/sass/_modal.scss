@@ -1,0 +1,177 @@
+.wrapper-modal{
+    display: none;
+    top:0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(2, 1, 1, 0.5);
+    z-index: 10;
+    .red-cross{
+        position: absolute;
+        top: 85px;
+        right: 33%;
+        margin-left: 20px;
+        display: block;
+        background-color: rgba(2, 1, 1, 0.01);
+        border: none;
+        margin-top: 10px;
+}
+
+    }
+    .modal{
+        margin: 100px auto;
+        height: 402px;
+        width: 382px;
+        background-color: #f2f2f2;
+        padding: 35px 40px;
+        z-index: 10;
+        
+        h3{
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 19px;
+            text-align: center;
+            color:#0D0D0D;
+        }
+        p{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 14px;
+            text-align: center;
+            color:#0D0D0D;
+        }
+        .feed-form{
+            margin-top: 26px;
+            .button_main{
+                margin-top: 17px;
+            }
+        }
+       
+
+}
+///адаптация 
+@media  screen and (max-width: 1330px){
+    .wrapper-modal{
+        .red-cross{
+            right: 32%;
+        }
+    }
+}
+@media  screen and (max-width: 1260px){
+    .wrapper-modal{
+        .red-cross{
+            right: 31%;
+        }
+    }
+}
+@media  screen and (max-width: 1185px){
+    .wrapper-modal{
+        .red-cross{
+            right: 30%;
+        }
+    }
+}
+@media  screen and (max-width: 1120px){
+    .wrapper-modal{
+        .red-cross{
+            right: 28.5%;
+        }
+    }
+}
+@media  screen and (max-width: 1035px){
+    .wrapper-modal{
+        .red-cross{
+            right: 25.5%;
+        }
+    }
+}
+@media  screen and (max-width: 920px){
+    .wrapper-modal{
+        .red-cross{
+            right: 23%;
+        }
+    }
+}
+@media  screen and (max-width: 830px){
+    .wrapper-modal{
+        .red-cross{
+            right: 21%;
+        }
+    }
+}
+@media  screen and (max-width: 790px){
+    .wrapper-modal{
+        .red-cross{
+            right: 19.5%;
+        }
+    }
+}
+@media  screen and (max-width: 735px){
+    .wrapper-modal{
+        .red-cross{
+            right: 17%;
+        }
+    }
+}
+@media  screen and (max-width: 680px){
+    .wrapper-modal{
+        .red-cross{
+            right: 14.5%;
+        }
+    }}
+@media screen and (max-width: 630px){
+        .wrapper-modal{
+            .red-cross{
+                right: 11.5%;
+            }
+}}
+@media screen and (max-width: 580px){
+    .wrapper-modal{
+        .red-cross{
+            right: 9%;
+        }
+}}
+@media screen and (max-width: 530px){
+    .wrapper-modal{
+        .red-cross{
+            right: 11%;
+        }
+    .modal{
+        height: 380px;
+        width: 300px;
+        padding: 20px 10px;
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+        }
+        .feed-form{
+            width: 280px;
+            .button_main{
+                width: 280px;
+            }
+        }
+    }
+}}
+@media screen and (max-width: 580px){
+    .wrapper-modal{
+        .red-cross{
+            right: 7%;
+        }}}
+@media screen and (max-width: 415px){
+    .wrapper-modal{
+        .red-cross{
+            top: 90px;
+            left: 69%;
+                }}}
+@media screen and (max-width: 390px){
+    .wrapper-modal{
+        .red-cross{
+             left:72%;
+                }}}
+ @media screen and (max-width: 350px){
+    .wrapper-modal{
+            .red-cross{
+                    left:79%;
+                        }}}

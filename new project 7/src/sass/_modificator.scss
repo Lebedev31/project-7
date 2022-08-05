@@ -1,0 +1,53 @@
+.active {
+    left: -2px !important;
+  }
+  
+  .gamburger_active { 
+    span {
+    margin-bottom: -2px;}
+  
+    span:nth-child(1) {
+      transform: translateY(3px) rotate(-45deg);
+    }
+  
+    span:nth-child(2) {
+      display: none !important;
+    }
+  
+    span:nth-child(3) {
+      transform: translateY(3px) rotate(45deg);
+    }
+  
+}
+
+
+.benefits__icons-animation img {
+    animation-name: bigheart;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    @keyframes bigheart {
+    0%{transform: scale(1);}
+    5%{transform: scale(1.03);}
+    10%{transform: scale(1.09);}
+    20%{transform: scale(1.15);}
+    30%{transform: scale(1.20);}
+    40%{transform: scale(1.23);}
+    50%{transform: scale(1.20);}
+    60%{transform: scale(1.15);}
+    70%{transform: scale(1.09);}
+    80%{transform: scale(1.05);}
+    90%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+  }
+  }
+  .catalog__button-active{
+    background-color: red;
+    color: #ffffff !important;
+  }
+
+  .catalog__wrapper2-active{
+    display: none !important;
+  }
+
+  
+  
