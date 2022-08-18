@@ -4,13 +4,20 @@
     flex-direction: column;
     width: 300px;
     input{
-    	height: 54px;
-    	border-radius: 5px;
-			border: none;
+    	    height: 54px;
+    	    border-radius: 5px;
 			margin-bottom: 11px;
+            border: none;
 			background-color: #ffffff;
 			padding: 0 20px;
 			font-size: 14px;
 			font-weight: 400;
     }
+    input:valid{
+        border: 2px solid greenyellow;
+    }
+    input:not(:placeholder-shown):invalid {
+        border: 2px solid red;}
+    
+      
 }

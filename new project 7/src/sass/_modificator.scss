@@ -48,6 +48,21 @@
   .catalog__wrapper2-active{
     display: none !important;
   }
+.catalog__info-active{
+    display: block !important;
+}
 
+.pageap{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    z-index: 6;
+    img{
+        width: 40px;
+    }
+}
   
   

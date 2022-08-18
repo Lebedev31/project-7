@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse</title>
+    <link rel="icon" href="icons/favicon.ico.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
@@ -22,7 +23,7 @@
                         <p class="header__text2">Garmin, Polar, Suunto</p>
                     </div>
                     <div class="header__contact">
-                        <div class="header__phone"><a href="tel:+7 (499) 922-89-74">+7 (499) 922-89-74</a></div>
+                        <div class="header__phone"><a href="tel:+7(499)922-89-74">+7 (499) 922-89-74</a></div>
                         <button class="button" id="modal">заказать звонок</button>
                     </div>
                </div>
@@ -34,7 +35,7 @@
                 <div class="wrapper-gamburger"></div>
           </div>
    </header>
-   <section class="promo">
+   <section class="promo" id="up">
         <div class="container">
             <h1>подбор пульсометра</h1>
             <h2>с учётом Вашего уровня подготовки</h2>
@@ -67,7 +68,7 @@
                 </div>
 
                 <div class="benefits__text">
-                    <div class="benefits__icons benefits__icons-animation"><img src="icons/heart.svg"alt="сердце"></div>
+                    <div class="benefits__icons benefits__icons-animation"><img src="icons/heart.svg" alt="сердце"></div>
                     <h3>Заботимся о здоровье</h3>
                     <p>Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</p>
                 </div>
@@ -85,7 +86,7 @@
             <h2>Получите бесплатную консультацию по подбору пульсометра</h2>
             <p class="consultation__text">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</p>
             <form action="#" class="feed-form">
-                <input name="name" required placeholder="Ваше имя" type="text" class="">
+                <input name="name" required minlength="2" maxlength="35" pattern="[a-zA-Z0-9]+"  placeholder="Ваше имя" type="text">
                 <input name="phone" required placeholder="Ваш телефон " type="number">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
                 <button class=" button button_main" >Заказать консультацию</button>
@@ -208,7 +209,7 @@
         <h3>Просто заполните форму заявки</h3>
         <p>и мы перезвоним вам в течении 10 минут</p>
         <form action="#" class="feed-form">
-            <input name="name" required placeholder="Ваше имя" type="text" class="">
+            <input name="name" required minlength="2" maxlength="35" pattern="[a-zA-Z0-9]+" placeholder="Ваше имя" type="text">
             <input name="phone" required placeholder="Ваш телефон " type="number">
             <input name="email" required placeholder="Ваш E-mail" type="email">
             <button class=" button button_main" >Заказать консультацию</button>
@@ -222,10 +223,10 @@
     <div class="modal">
         <h3>Ваш заказ:</h3>
         <p></p>
-        <form action="#" class="feed-form">
-            <input name="name" required placeholder="Ваше имя" type="text" class="">
-            <input name="phone" required placeholder="Ваш телефон " type="number">
-            <input name="email" required placeholder="Ваш E-mail" type="email">
+        <form action="#" class="feed-form" >
+            <input name="name" required minlength="2" maxlength="35" pattern="[a-zA-Z0-9]+"      placeholder="Ваше имя" type="text">
+            <input name="phone"  required placeholder="Ваш телефон " type="number">
+            <input name="email"  required placeholder="Ваш E-mail" type="email">
             <button class=" button button_main">Купить</button>
         </form>
     </div>
@@ -266,6 +267,21 @@
         </div>
     </div>
 </section>
+
+<footer class="footer">
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac8abd314a17cd1335ff4d3c6c9f8e6f599c9fab57729a94e533da180056f09c5&amp;source=constructor" width="100%" height="630" frameborder="0"></iframe>
+  <div class="footer__info">
+        <address>Москва, Мясницкий проезд, д.3с1</address>
+        <p class="footer__contact"><a href="tel:+7 (499) 922-89-74">(499) 922-89-74</a></p>
+        <div class="footer__social">
+            <a href="#"><img src="icons/1.png" alt="картинка"></a>
+            <a href="#"><img src="icons/2.png" alt="картинка"></a>
+            <a href="#"><img src="icons/3.png" alt="картинка"></a>
+        </div>
+</div>
+</footer>
+   <a href="#up"class="pageap"><img src="icons/circle-arrow-up-solid (1).svg" alt="up" ></a>
+  
 
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

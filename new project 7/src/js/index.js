@@ -61,24 +61,39 @@ tabs.forEach(function(elem){
 const more = document.querySelectorAll('.more');
 const catalogItem = document.querySelectorAll('.catalog__item');
 const catalogList = document.querySelector('.catalog__info');
-let clone;
-let parent;
-let flag = false;
 
-
+let arr = [];
+for (let i = 0; i < catalogItem.length; i++){
+    arr.push(catalogList.cloneNode(true));
+}
+let clone = [];
+for(let elem of catalogItem){
+    clone.push(elem)
+}
 more.forEach(function(elem){
     elem.addEventListener('click', function(e){
-       if(elem == e.target){
-          parent = elem.parentElement;
-          clone = catalogList.cloneNode(true);
-          clone.style.display = 'block';
-          parent.replaceWith(clone);
-          flag = true;
-       }
+        if(elem == e.target){
+           let index = clone.indexOf(elem.parentElement);
+           arr[index].classList.add('catalog__info-active');
+           clone[index].replaceWith(arr[index]);
+        }
     })
 })
-let back;
-flag == true ? back = clone.querySelector('.back'):false
+let back = [];
+for(let elem of arr){
+   back.push(elem.querySelector('.back'))
+}
+
+back.forEach((elem)=>{
+    elem.addEventListener('click', function(e){
+        if(elem == e.target){
+            let index = arr.indexOf(elem.parentElement);
+            arr[index].replaceWith(clone[index]);
+        }
+    })
+})
+
+
 
 ///////// модальные окна 1
 const buttonModal = document.querySelector('#modal');
@@ -114,5 +129,77 @@ redCross2.addEventListener('click', function(){
     wrapperModal2.style.display = 'none';
     document.body.style.overflow = '';
 })
+
+// модальные окна для catalog__info
+let buttonTabs2 = [];
+arr.forEach(function(elem){
+    buttonTabs2.push(elem.lastElementChild)
+})
+buttonTabs2.forEach(function(elem){
+    elem.addEventListener('click', function(){
+            let index = arr.indexOf(elem.parentElement);
+            let h3 = catalogItem[index].querySelector('h3');
+            wrapperModal2.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            modalP.textContent = h3.textContent;
+            
+    })
+})
+
+// валидация формы
+const forms = document.querySelectorAll('.feed-form');
+
+forms.forEach(function(elem){
+    elem.name.addEventListener('change', validityForms);
+})
+
+function validityForms(){
+    this.setCustomValidity('');
+    if(this.validity.patternMismatch) {
+        this.setCustomValidity('Могут использоваться кириллица, латиница и цифры')
+    }
+}
+
+const redCrossCollection = document.querySelectorAll('.red-cross');
+redCrossCollection.forEach((elem)=> {
+    elem.addEventListener('click', ()=>{
+            forms.forEach((elem)=>{
+                elem.reset();
+            })
+        
+    })
+})
+
+//отправка формы eeeeee!!!!!
+forms.forEach(function(elem){
+    elem.addEventListener('submit', async function(e){
+        e.preventDefault();
+        let response;
+        if(elem == e.target){
+        response = await fetch('mailer/smart.php', {
+            method: 'POST',
+            body: new FormData(elem),
+        })} if(response.ok == true){
+            alert('форма отправлена');
+            elem.reset();
+        }
+
+        })})
+
+
+// красная стрелочка
+const pageAp = document.querySelector('.pageap');
+window.addEventListener('scroll', function() {
+   let sc = scrollY;
+   if(sc > 1600){
+     pageAp.style.display = 'block';
+   }
+   else{
+    pageAp.style.display = 'none';
+   }
+  })
+  
+
+
 
 
